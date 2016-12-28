@@ -1,0 +1,11 @@
+GeneratorModel for yakindu::c {
+
+	statechart ampel {
+
+		feature Outlet {
+			targetProject = "Ampel"
+			targetFolder = "src-gen"
+			libraryTargetFolder = "Src"
+		}
+	}
+}
