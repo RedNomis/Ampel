@@ -21,16 +21,16 @@ typedef enum
 	Ampel_main_region_off_r1_YellowOff,
 	Ampel_main_region_on,
 	Ampel_main_region_on_r1_Green,
-	Ampel_main_region_on_r1_GreenYellow,
+	Ampel_main_region_on_r1_Yellow,
 	Ampel_main_region_on_r1_Red,
-	Ampel_main_region_on_r1_RedYellow,
-	Ampel_main_region_on_r1_YellowGreen
+	Ampel_main_region_on_r1_RedYellow
 } AmpelStates;
 
 /*! Type definition of the data structure for the AmpelIface interface scope. */
 typedef struct
 {
 	sc_integer push;
+	sc_boolean trafficlight_active;
 	sc_boolean evPushButton_raised;
 	sc_boolean dummy_raised;
 } AmpelIface;
@@ -41,10 +41,9 @@ typedef struct
 	sc_boolean ampel_main_region_off_r1_YellowOn_tev0_raised;
 	sc_boolean ampel_main_region_off_r1_YellowOff_tev0_raised;
 	sc_boolean ampel_main_region_on_r1_Green_tev0_raised;
-	sc_boolean ampel_main_region_on_r1_GreenYellow_tev0_raised;
+	sc_boolean ampel_main_region_on_r1_Yellow_tev0_raised;
 	sc_boolean ampel_main_region_on_r1_Red_tev0_raised;
 	sc_boolean ampel_main_region_on_r1_RedYellow_tev0_raised;
-	sc_boolean ampel_main_region_on_r1_YellowGreen_tev0_raised;
 } AmpelTimeEvents;
 
 
@@ -60,10 +59,9 @@ typedef struct
 #define SCVI_AMPEL_MAIN_REGION_OFF_R1_YELLOWOFF 0
 #define SCVI_AMPEL_MAIN_REGION_ON 0
 #define SCVI_AMPEL_MAIN_REGION_ON_R1_GREEN 0
-#define SCVI_AMPEL_MAIN_REGION_ON_R1_GREENYELLOW 0
+#define SCVI_AMPEL_MAIN_REGION_ON_R1_YELLOW 0
 #define SCVI_AMPEL_MAIN_REGION_ON_R1_RED 0
 #define SCVI_AMPEL_MAIN_REGION_ON_R1_REDYELLOW 0
-#define SCVI_AMPEL_MAIN_REGION_ON_R1_YELLOWGREEN 0
 
 /*! 
  * Type definition of the data structure for the Ampel state machine.
@@ -98,6 +96,10 @@ extern void ampel_raiseTimeEvent(const Ampel* handle, sc_eventid evid);
 extern sc_integer ampelIface_get_push(const Ampel* handle);
 /*! Sets the value of the variable 'push' that is defined in the default interface scope. */ 
 extern void ampelIface_set_push(Ampel* handle, sc_integer value);
+/*! Gets the value of the variable 'trafficlight_active' that is defined in the default interface scope. */ 
+extern sc_boolean ampelIface_get_trafficlight_active(const Ampel* handle);
+/*! Sets the value of the variable 'trafficlight_active' that is defined in the default interface scope. */ 
+extern void ampelIface_set_trafficlight_active(Ampel* handle, sc_boolean value);
 /*! Raises the in event 'evPushButton' that is defined in the default interface scope. */ 
 extern void ampelIface_raise_evPushButton(Ampel* handle);
 

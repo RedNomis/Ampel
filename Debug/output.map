@@ -2443,7 +2443,7 @@ Discarded input sections
  .debug_macro   0x0000000000000000      0x1df Src/timer.o
  .debug_macro   0x0000000000000000       0x22 Src/timer.o
  .debug_macro   0x0000000000000000       0x1c Src/timer.o
- .debug_macro   0x0000000000000000       0x46 Src/timer.o
+ .debug_macro   0x0000000000000000       0x40 Src/timer.o
  .debug_macro   0x0000000000000000       0x76 Src/timer.o
  .debug_macro   0x0000000000000000      0x1a4 Src/timer.o
  .debug_macro   0x0000000000000000       0x31 Src/timer.o
@@ -2521,16 +2521,20 @@ Discarded input sections
  .data          0x0000000000000000        0x0 src-gen/Ampel.o
  .bss           0x0000000000000000        0x0 src-gen/Ampel.o
  .text.ampel_exit
-                0x0000000000000000       0x9e src-gen/Ampel.o
+                0x0000000000000000       0x8c src-gen/Ampel.o
  .text.ampel_isActive
                 0x0000000000000000        0xa src-gen/Ampel.o
  .text.ampel_isFinal
                 0x0000000000000000        0x4 src-gen/Ampel.o
  .text.ampel_isStateActive
-                0x0000000000000000       0x5e src-gen/Ampel.o
+                0x0000000000000000       0x56 src-gen/Ampel.o
  .text.ampelIface_raise_dummy
                 0x0000000000000000        0x6 src-gen/Ampel.o
  .text.ampelIface_get_push
+                0x0000000000000000        0x4 src-gen/Ampel.o
+ .text.ampelIface_get_trafficlight_active
+                0x0000000000000000        0x4 src-gen/Ampel.o
+ .text.ampelIface_set_trafficlight_active
                 0x0000000000000000        0x4 src-gen/Ampel.o
  .debug_macro   0x0000000000000000      0x8c2 src-gen/Ampel.o
  .debug_macro   0x0000000000000000       0x22 src-gen/Ampel.o
@@ -2654,7 +2658,7 @@ LOAD /home/simon/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.l
                 0x0000000008000000                g_pfnVectors
                 0x0000000008000198                . = ALIGN (0x4)
 
-.text           0x0000000008000198      0xfac
+.text           0x0000000008000198      0xfb4
                 0x0000000008000198                . = ALIGN (0x4)
  *(.text)
  .text          0x0000000008000198       0x6c /home/simon/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.15.0.201708311556/tools/compiler/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtbegin.o
@@ -2845,97 +2849,102 @@ LOAD /home/simon/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.l
  .text.TimerDecrease
                 0x0000000008000dd4       0x40 Src/timer.o
                 0x0000000008000dd4                TimerDecrease
+ .text.ampel_enact_main_region_on
+                0x0000000008000e14       0x18 src-gen/Ampel.o
  .text.ampel_enact_main_region_off_r1_YellowOn
-                0x0000000008000e14       0x1c src-gen/Ampel.o
+                0x0000000008000e2c       0x1c src-gen/Ampel.o
  .text.ampel_effect_main_region_off_tr0
-                0x0000000008000e30       0x50 src-gen/Ampel.o
+                0x0000000008000e48       0x50 src-gen/Ampel.o
+ .text.ampel_effect_main_region_on_tr0
+                0x0000000008000e98       0x74 src-gen/Ampel.o
  .text.ampel_init
-                0x0000000008000e80       0x1c src-gen/Ampel.o
-                0x0000000008000e80                ampel_init
+                0x0000000008000f0c       0x1c src-gen/Ampel.o
+                0x0000000008000f0c                ampel_init
  .text.ampel_enter
-                0x0000000008000e9c       0x12 src-gen/Ampel.o
-                0x0000000008000e9c                ampel_enter
+                0x0000000008000f28       0x18 src-gen/Ampel.o
+                0x0000000008000f28                ampel_enter
  .text.ampel_runCycle
-                0x0000000008000eae      0x218 src-gen/Ampel.o
-                0x0000000008000eae                ampel_runCycle
+                0x0000000008000f40      0x18c src-gen/Ampel.o
+                0x0000000008000f40                ampel_runCycle
  .text.ampel_raiseTimeEvent
-                0x00000000080010c6       0x14 src-gen/Ampel.o
-                0x00000000080010c6                ampel_raiseTimeEvent
+                0x00000000080010cc       0x14 src-gen/Ampel.o
+                0x00000000080010cc                ampel_raiseTimeEvent
  .text.ampelIface_raise_evPushButton
-                0x00000000080010da        0x6 src-gen/Ampel.o
-                0x00000000080010da                ampelIface_raise_evPushButton
+                0x00000000080010e0        0x6 src-gen/Ampel.o
+                0x00000000080010e0                ampelIface_raise_evPushButton
  .text.ampelIface_set_push
-                0x00000000080010e0        0x4 src-gen/Ampel.o
-                0x00000000080010e0                ampelIface_set_push
+                0x00000000080010e6        0x4 src-gen/Ampel.o
+                0x00000000080010e6                ampelIface_set_push
+ *fill*         0x00000000080010ea        0x2 
  .text.__libc_init_array
-                0x00000000080010e4       0x48 /home/simon/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.15.0.201708311556/tools/compiler/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-init.o)
-                0x00000000080010e4                __libc_init_array
+                0x00000000080010ec       0x48 /home/simon/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.15.0.201708311556/tools/compiler/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-init.o)
+                0x00000000080010ec                __libc_init_array
  *(.glue_7)
- .glue_7        0x000000000800112c        0x0 linker stubs
+ .glue_7        0x0000000008001134        0x0 linker stubs
  *(.glue_7t)
- .glue_7t       0x000000000800112c        0x0 linker stubs
+ .glue_7t       0x0000000008001134        0x0 linker stubs
  *(.eh_frame)
- .eh_frame      0x000000000800112c        0x0 /home/simon/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.15.0.201708311556/tools/compiler/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtbegin.o
+ .eh_frame      0x0000000008001134        0x0 /home/simon/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.15.0.201708311556/tools/compiler/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtbegin.o
  *(.init)
- .init          0x000000000800112c        0x4 /home/simon/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.15.0.201708311556/tools/compiler/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crti.o
-                0x000000000800112c                _init
- .init          0x0000000008001130        0x8 /home/simon/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.15.0.201708311556/tools/compiler/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtn.o
+ .init          0x0000000008001134        0x4 /home/simon/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.15.0.201708311556/tools/compiler/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crti.o
+                0x0000000008001134                _init
+ .init          0x0000000008001138        0x8 /home/simon/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.15.0.201708311556/tools/compiler/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtn.o
  *(.fini)
- .fini          0x0000000008001138        0x4 /home/simon/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.15.0.201708311556/tools/compiler/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crti.o
-                0x0000000008001138                _fini
- .fini          0x000000000800113c        0x8 /home/simon/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.15.0.201708311556/tools/compiler/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtn.o
-                0x0000000008001144                . = ALIGN (0x4)
-                0x0000000008001144                _etext = .
+ .fini          0x0000000008001140        0x4 /home/simon/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.15.0.201708311556/tools/compiler/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crti.o
+                0x0000000008001140                _fini
+ .fini          0x0000000008001144        0x8 /home/simon/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.15.0.201708311556/tools/compiler/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtn.o
+                0x000000000800114c                . = ALIGN (0x4)
+                0x000000000800114c                _etext = .
 
-.vfp11_veneer   0x0000000008001144        0x0
- .vfp11_veneer  0x0000000008001144        0x0 linker stubs
+.vfp11_veneer   0x000000000800114c        0x0
+ .vfp11_veneer  0x000000000800114c        0x0 linker stubs
 
-.v4_bx          0x0000000008001144        0x0
- .v4_bx         0x0000000008001144        0x0 linker stubs
+.v4_bx          0x000000000800114c        0x0
+ .v4_bx         0x000000000800114c        0x0 linker stubs
 
-.iplt           0x0000000008001144        0x0
- .iplt          0x0000000008001144        0x0 /home/simon/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.15.0.201708311556/tools/compiler/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtbegin.o
+.iplt           0x000000000800114c        0x0
+ .iplt          0x000000000800114c        0x0 /home/simon/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.15.0.201708311556/tools/compiler/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtbegin.o
 
-.rodata         0x0000000008001144       0x10
-                0x0000000008001144                . = ALIGN (0x4)
+.rodata         0x000000000800114c       0x10
+                0x000000000800114c                . = ALIGN (0x4)
  *(.rodata)
- .rodata        0x0000000008001144       0x10 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o
-                0x0000000008001144                APBAHBPrescTable
+ .rodata        0x000000000800114c       0x10 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o
+                0x000000000800114c                APBAHBPrescTable
  *(.rodata*)
-                0x0000000008001154                . = ALIGN (0x4)
+                0x000000000800115c                . = ALIGN (0x4)
 
-.rel.dyn        0x0000000008001154        0x0
- .rel.iplt      0x0000000008001154        0x0 /home/simon/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.15.0.201708311556/tools/compiler/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtbegin.o
+.rel.dyn        0x000000000800115c        0x0
+ .rel.iplt      0x000000000800115c        0x0 /home/simon/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.15.0.201708311556/tools/compiler/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtbegin.o
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
 
-.ARM            0x0000000008001154        0x0
-                0x0000000008001154                __exidx_start = .
+.ARM            0x000000000800115c        0x0
+                0x000000000800115c                __exidx_start = .
  *(.ARM.exidx*)
-                0x0000000008001154                __exidx_end = .
+                0x000000000800115c                __exidx_end = .
 
-.preinit_array  0x0000000008001154        0x0
-                0x0000000008001154                PROVIDE (__preinit_array_start, .)
+.preinit_array  0x000000000800115c        0x0
+                0x000000000800115c                PROVIDE (__preinit_array_start, .)
  *(.preinit_array*)
-                0x0000000008001154                PROVIDE (__preinit_array_end, .)
+                0x000000000800115c                PROVIDE (__preinit_array_end, .)
 
-.init_array     0x0000000008001154        0x4
-                0x0000000008001154                PROVIDE (__init_array_start, .)
+.init_array     0x000000000800115c        0x4
+                0x000000000800115c                PROVIDE (__init_array_start, .)
  *(SORT(.init_array.*))
  *(.init_array*)
- .init_array    0x0000000008001154        0x4 /home/simon/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.15.0.201708311556/tools/compiler/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtbegin.o
-                0x0000000008001158                PROVIDE (__init_array_end, .)
+ .init_array    0x000000000800115c        0x4 /home/simon/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.15.0.201708311556/tools/compiler/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtbegin.o
+                0x0000000008001160                PROVIDE (__init_array_end, .)
 
-.fini_array     0x0000000008001158        0x4
+.fini_array     0x0000000008001160        0x4
                 [!provide]                        PROVIDE (__fini_array_start, .)
  *(SORT(.fini_array.*))
  *(.fini_array*)
- .fini_array    0x0000000008001158        0x4 /home/simon/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.15.0.201708311556/tools/compiler/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtbegin.o
+ .fini_array    0x0000000008001160        0x4 /home/simon/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.15.0.201708311556/tools/compiler/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtbegin.o
                 [!provide]                        PROVIDE (__fini_array_end, .)
-                0x000000000800115c                _sidata = LOADADDR (.data)
+                0x0000000008001164                _sidata = LOADADDR (.data)
 
-.data           0x0000000020000000        0x4 load address 0x000000000800115c
+.data           0x0000000020000000        0x4 load address 0x0000000008001164
                 0x0000000020000000                . = ALIGN (0x4)
                 0x0000000020000000                _sdata = .
  *(.data)
@@ -2945,14 +2954,14 @@ LOAD /home/simon/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.l
                 0x0000000020000004                . = ALIGN (0x4)
                 0x0000000020000004                _edata = .
 
-.jcr            0x0000000020000004        0x0 load address 0x0000000008001160
+.jcr            0x0000000020000004        0x0 load address 0x0000000008001168
  .jcr           0x0000000020000004        0x0 /home/simon/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.15.0.201708311556/tools/compiler/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtbegin.o
 
-.igot.plt       0x0000000020000004        0x0 load address 0x0000000008001160
+.igot.plt       0x0000000020000004        0x0 load address 0x0000000008001168
  .igot.plt      0x0000000020000004        0x0 /home/simon/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.15.0.201708311556/tools/compiler/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtbegin.o
                 0x0000000020000004                . = ALIGN (0x4)
 
-.bss            0x0000000020000004       0x44 load address 0x0000000008001160
+.bss            0x0000000020000004       0x44 load address 0x0000000008001168
                 0x0000000020000004                _sbss = .
                 0x0000000020000004                __bss_start__ = _sbss
  *(.bss)
@@ -2971,7 +2980,7 @@ LOAD /home/simon/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.l
                 0x0000000020000048                __bss_end__ = _ebss
 
 ._user_heap_stack
-                0x0000000020000048      0x600 load address 0x0000000008001160
+                0x0000000020000048      0x600 load address 0x0000000008001168
                 0x0000000020000048                . = ALIGN (0x8)
                 [!provide]                        PROVIDE (end, .)
                 [!provide]                        PROVIDE (_end, .)
@@ -3021,7 +3030,7 @@ LOAD /home/simon/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.l
                 0x00000000000002e5       0x22 /home/simon/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.15.0.201708311556/tools/compiler/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtn.o
 OUTPUT(Ampel.elf elf32-littlearm)
 
-.debug_line     0x0000000000000000     0x542d
+.debug_line     0x0000000000000000     0x5442
  .debug_line    0x0000000000000000       0xae Drivers/CMSIS/Device/ST/STM32F4xx/Source/Templates/gcc/startup_stm32f411xe.o
  .debug_line    0x00000000000000ae      0x7a2 Drivers/CMSIS/Device/ST/STM32F4xx/Source/Templates/system_stm32f4xx.o
  .debug_line    0x0000000000000850      0x8d1 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o
@@ -3032,22 +3041,22 @@ OUTPUT(Ampel.elf elf32-littlearm)
  .debug_line    0x00000000000036ba      0x74b Src/stm32f4xx_hal_msp.o
  .debug_line    0x0000000000003e05      0x785 Src/stm32f4xx_it.o
  .debug_line    0x000000000000458a      0x7d3 Src/timer.o
- .debug_line    0x0000000000004d5d      0x6d0 src-gen/Ampel.o
+ .debug_line    0x0000000000004d5d      0x6e5 src-gen/Ampel.o
 
-.debug_info     0x0000000000000000     0xb432
+.debug_info     0x0000000000000000     0xb30c
  .debug_info    0x0000000000000000       0x92 Drivers/CMSIS/Device/ST/STM32F4xx/Source/Templates/gcc/startup_stm32f411xe.o
  .debug_info    0x0000000000000092      0xd26 Drivers/CMSIS/Device/ST/STM32F4xx/Source/Templates/system_stm32f4xx.o
  .debug_info    0x0000000000000db8     0x109a Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o
  .debug_info    0x0000000000001e52     0x1603 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o
  .debug_info    0x0000000000003455      0xf81 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o
  .debug_info    0x00000000000043d6     0x14db Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o
- .debug_info    0x00000000000058b1     0x1731 Src/main.o
- .debug_info    0x0000000000006fe2      0xbc6 Src/stm32f4xx_hal_msp.o
- .debug_info    0x0000000000007ba8      0xa9a Src/stm32f4xx_it.o
- .debug_info    0x0000000000008642      0xbf9 Src/timer.o
- .debug_info    0x000000000000923b     0x21f7 src-gen/Ampel.o
+ .debug_info    0x00000000000058b1     0x172b Src/main.o
+ .debug_info    0x0000000000006fdc      0xbc6 Src/stm32f4xx_hal_msp.o
+ .debug_info    0x0000000000007ba2      0xa9a Src/stm32f4xx_it.o
+ .debug_info    0x000000000000863c      0xbf3 Src/timer.o
+ .debug_info    0x000000000000922f     0x20dd src-gen/Ampel.o
 
-.debug_abbrev   0x0000000000000000     0x1d22
+.debug_abbrev   0x0000000000000000     0x1d41
  .debug_abbrev  0x0000000000000000       0x12 Drivers/CMSIS/Device/ST/STM32F4xx/Source/Templates/gcc/startup_stm32f411xe.o
  .debug_abbrev  0x0000000000000012      0x216 Drivers/CMSIS/Device/ST/STM32F4xx/Source/Templates/system_stm32f4xx.o
  .debug_abbrev  0x0000000000000228      0x341 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o
@@ -3058,9 +3067,9 @@ OUTPUT(Ampel.elf elf32-littlearm)
  .debug_abbrev  0x00000000000012db      0x20c Src/stm32f4xx_hal_msp.o
  .debug_abbrev  0x00000000000014e7      0x250 Src/stm32f4xx_it.o
  .debug_abbrev  0x0000000000001737      0x225 Src/timer.o
- .debug_abbrev  0x000000000000195c      0x3c6 src-gen/Ampel.o
+ .debug_abbrev  0x000000000000195c      0x3e5 src-gen/Ampel.o
 
-.debug_aranges  0x0000000000000000      0x400
+.debug_aranges  0x0000000000000000      0x420
  .debug_aranges
                 0x0000000000000000       0x28 Drivers/CMSIS/Device/ST/STM32F4xx/Source/Templates/gcc/startup_stm32f411xe.o
  .debug_aranges
@@ -3082,9 +3091,9 @@ OUTPUT(Ampel.elf elf32-littlearm)
  .debug_aranges
                 0x0000000000000348       0x30 Src/timer.o
  .debug_aranges
-                0x0000000000000378       0x88 src-gen/Ampel.o
+                0x0000000000000378       0xa8 src-gen/Ampel.o
 
-.debug_ranges   0x0000000000000000      0x940
+.debug_ranges   0x0000000000000000      0x838
  .debug_ranges  0x0000000000000000       0x20 Drivers/CMSIS/Device/ST/STM32F4xx/Source/Templates/gcc/startup_stm32f411xe.o
  .debug_ranges  0x0000000000000020       0x18 Drivers/CMSIS/Device/ST/STM32F4xx/Source/Templates/system_stm32f4xx.o
  .debug_ranges  0x0000000000000038       0xa8 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o
@@ -3095,9 +3104,9 @@ OUTPUT(Ampel.elf elf32-littlearm)
  .debug_ranges  0x00000000000004a8       0x10 Src/stm32f4xx_hal_msp.o
  .debug_ranges  0x00000000000004b8       0x28 Src/stm32f4xx_it.o
  .debug_ranges  0x00000000000004e0       0x20 Src/timer.o
- .debug_ranges  0x0000000000000500      0x440 src-gen/Ampel.o
+ .debug_ranges  0x0000000000000500      0x338 src-gen/Ampel.o
 
-.debug_loc      0x0000000000000000     0x1aec
+.debug_loc      0x0000000000000000     0x1bf1
  .debug_loc     0x0000000000000000      0x11c Drivers/CMSIS/Device/ST/STM32F4xx/Source/Templates/system_stm32f4xx.o
  .debug_loc     0x000000000000011c       0x92 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o
  .debug_loc     0x00000000000001ae      0x4da Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o
@@ -3105,9 +3114,9 @@ OUTPUT(Ampel.elf elf32-littlearm)
  .debug_loc     0x0000000000000a09      0x4a5 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o
  .debug_loc     0x0000000000000eae      0x129 Src/main.o
  .debug_loc     0x0000000000000fd7       0xd2 Src/timer.o
- .debug_loc     0x00000000000010a9      0xa43 src-gen/Ampel.o
+ .debug_loc     0x00000000000010a9      0xb48 src-gen/Ampel.o
 
-.debug_macro    0x0000000000000000     0xeee7
+.debug_macro    0x0000000000000000     0xeedb
  .debug_macro   0x0000000000000000      0x2fc Drivers/CMSIS/Device/ST/STM32F4xx/Source/Templates/system_stm32f4xx.o
  .debug_macro   0x00000000000002fc      0x8c2 Drivers/CMSIS/Device/ST/STM32F4xx/Source/Templates/system_stm32f4xx.o
  .debug_macro   0x0000000000000bbe       0x31 Drivers/CMSIS/Device/ST/STM32F4xx/Source/Templates/system_stm32f4xx.o
@@ -3171,25 +3180,25 @@ OUTPUT(Ampel.elf elf32-littlearm)
  .debug_macro   0x000000000000dcb7      0x32b Src/main.o
  .debug_macro   0x000000000000dfe2       0x22 Src/main.o
  .debug_macro   0x000000000000e004       0x1c Src/main.o
- .debug_macro   0x000000000000e020       0x46 Src/main.o
- .debug_macro   0x000000000000e066      0x2f6 Src/stm32f4xx_hal_msp.o
- .debug_macro   0x000000000000e35c      0x300 Src/stm32f4xx_it.o
- .debug_macro   0x000000000000e65c      0x325 Src/timer.o
- .debug_macro   0x000000000000e981       0x3b Src/timer.o
- .debug_macro   0x000000000000e9bc      0x16e src-gen/Ampel.o
- .debug_macro   0x000000000000eb2a       0x52 src-gen/Ampel.o
- .debug_macro   0x000000000000eb7c       0x8d src-gen/Ampel.o
- .debug_macro   0x000000000000ec09       0x16 src-gen/Ampel.o
- .debug_macro   0x000000000000ec1f      0x10e src-gen/Ampel.o
- .debug_macro   0x000000000000ed2d       0x8d src-gen/Ampel.o
- .debug_macro   0x000000000000edba       0x57 src-gen/Ampel.o
- .debug_macro   0x000000000000ee11       0x16 src-gen/Ampel.o
- .debug_macro   0x000000000000ee27       0x29 src-gen/Ampel.o
- .debug_macro   0x000000000000ee50       0x16 src-gen/Ampel.o
- .debug_macro   0x000000000000ee66       0x35 src-gen/Ampel.o
- .debug_macro   0x000000000000ee9b       0x4c src-gen/Ampel.o
+ .debug_macro   0x000000000000e020       0x40 Src/main.o
+ .debug_macro   0x000000000000e060      0x2f6 Src/stm32f4xx_hal_msp.o
+ .debug_macro   0x000000000000e356      0x300 Src/stm32f4xx_it.o
+ .debug_macro   0x000000000000e656      0x325 Src/timer.o
+ .debug_macro   0x000000000000e97b       0x3b Src/timer.o
+ .debug_macro   0x000000000000e9b6      0x16e src-gen/Ampel.o
+ .debug_macro   0x000000000000eb24       0x52 src-gen/Ampel.o
+ .debug_macro   0x000000000000eb76       0x8d src-gen/Ampel.o
+ .debug_macro   0x000000000000ec03       0x16 src-gen/Ampel.o
+ .debug_macro   0x000000000000ec19      0x10e src-gen/Ampel.o
+ .debug_macro   0x000000000000ed27       0x8d src-gen/Ampel.o
+ .debug_macro   0x000000000000edb4       0x57 src-gen/Ampel.o
+ .debug_macro   0x000000000000ee0b       0x16 src-gen/Ampel.o
+ .debug_macro   0x000000000000ee21       0x29 src-gen/Ampel.o
+ .debug_macro   0x000000000000ee4a       0x16 src-gen/Ampel.o
+ .debug_macro   0x000000000000ee60       0x35 src-gen/Ampel.o
+ .debug_macro   0x000000000000ee95       0x46 src-gen/Ampel.o
 
-.debug_str      0x0000000000000000    0x52256
+.debug_str      0x0000000000000000    0x52048
  .debug_str     0x0000000000000000    0x4fb1b Drivers/CMSIS/Device/ST/STM32F4xx/Source/Templates/system_stm32f4xx.o
                                       0x4fe0d (size before relaxing)
  .debug_str     0x000000000004fb1b      0x895 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o
@@ -3200,16 +3209,16 @@ OUTPUT(Ampel.elf elf32-littlearm)
                                       0x50074 (size before relaxing)
  .debug_str     0x00000000000509dd      0x38c Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o
                                       0x50202 (size before relaxing)
- .debug_str     0x0000000000050d69      0x6c7 Src/main.o
-                                      0x50a42 (size before relaxing)
- .debug_str     0x0000000000051430       0x1b Src/stm32f4xx_hal_msp.o
+ .debug_str     0x0000000000050d69      0x639 Src/main.o
+                                      0x509c8 (size before relaxing)
+ .debug_str     0x00000000000513a2       0x1b Src/stm32f4xx_hal_msp.o
                                       0x4fff3 (size before relaxing)
- .debug_str     0x000000000005144b       0x6f Src/stm32f4xx_it.o
+ .debug_str     0x00000000000513bd       0x6f Src/stm32f4xx_it.o
                                       0x4fd01 (size before relaxing)
- .debug_str     0x00000000000514ba       0xcb Src/timer.o
-                                      0x50254 (size before relaxing)
- .debug_str     0x0000000000051585      0xcd1 src-gen/Ampel.o
-                                       0x7706 (size before relaxing)
+ .debug_str     0x000000000005142c       0xcb Src/timer.o
+                                      0x501da (size before relaxing)
+ .debug_str     0x00000000000514f7      0xb51 src-gen/Ampel.o
+                                       0x750c (size before relaxing)
 
 .comment        0x0000000000000000       0x7f
  .comment       0x0000000000000000       0x7f Drivers/CMSIS/Device/ST/STM32F4xx/Source/Templates/system_stm32f4xx.o
@@ -3224,7 +3233,7 @@ OUTPUT(Ampel.elf elf32-littlearm)
  .comment       0x000000000000007f       0x80 Src/timer.o
  .comment       0x000000000000007f       0x80 src-gen/Ampel.o
 
-.debug_frame    0x0000000000000000      0x84c
+.debug_frame    0x0000000000000000      0x898
  .debug_frame   0x0000000000000000       0x38 Drivers/CMSIS/Device/ST/STM32F4xx/Source/Templates/system_stm32f4xx.o
  .debug_frame   0x0000000000000038      0x184 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o
  .debug_frame   0x00000000000001bc      0x138 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o
@@ -3234,5 +3243,5 @@ OUTPUT(Ampel.elf elf32-littlearm)
  .debug_frame   0x00000000000005f4       0x2c Src/stm32f4xx_hal_msp.o
  .debug_frame   0x0000000000000620       0x68 Src/stm32f4xx_it.o
  .debug_frame   0x0000000000000688       0x54 Src/timer.o
- .debug_frame   0x00000000000006dc      0x144 src-gen/Ampel.o
- .debug_frame   0x0000000000000820       0x2c /home/simon/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.15.0.201708311556/tools/compiler/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-init.o)
+ .debug_frame   0x00000000000006dc      0x190 src-gen/Ampel.o
+ .debug_frame   0x000000000000086c       0x2c /home/simon/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.15.0.201708311556/tools/compiler/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-init.o)
