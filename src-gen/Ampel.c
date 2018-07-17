@@ -83,22 +83,21 @@ static void ampel_clearOutEvents(Ampel* handle);
 
 void ampel_init(Ampel* handle)
 {
-	sc_integer i;
-
-	for (i = 0; i < AMPEL_MAX_ORTHOGONAL_STATES; ++i)
-	{
-		handle->stateConfVector[i] = Ampel_last_state;
-	}
+		sc_integer i;
 	
+		for (i = 0; i < AMPEL_MAX_ORTHOGONAL_STATES; ++i)
+		{
+			handle->stateConfVector[i] = Ampel_last_state;
+		}
+		
+		
+		handle->stateConfVectorPosition = 0;
 	
-	handle->stateConfVectorPosition = 0;
-
-	ampel_clearInEvents(handle);
-	ampel_clearOutEvents(handle);
-
-	/* Default init sequence for statechart ampel */
-	handle->iface.push = 0;
-
+		ampel_clearInEvents(handle);
+		ampel_clearOutEvents(handle);
+	
+		/* Default init sequence for statechart ampel */
+		handle->iface.push = 0;
 }
 
 void ampel_enter(Ampel* handle)
@@ -115,15 +114,14 @@ void ampel_exit(Ampel* handle)
 
 sc_boolean ampel_isActive(const Ampel* handle)
 {
-	sc_boolean result;
-	if (handle->stateConfVector[0] != Ampel_last_state)
+	sc_boolean result = bool_false;
+	int i;
+	
+	for(i = 0; i < AMPEL_MAX_ORTHOGONAL_STATES; i++)
 	{
-		result =  bool_true;
+		result = result || handle->stateConfVector[i] != Ampel_last_state;
 	}
-	else
-	{
-		result = bool_false;
-	}
+	
 	return result;
 }
 
@@ -156,7 +154,6 @@ void ampel_runCycle(Ampel* handle)
 {
 	
 	ampel_clearOutEvents(handle);
-	
 	for (handle->stateConfVectorPosition = 0;
 		handle->stateConfVectorPosition < AMPEL_MAX_ORTHOGONAL_STATES;
 		handle->stateConfVectorPosition++)
@@ -164,37 +161,37 @@ void ampel_runCycle(Ampel* handle)
 			
 		switch (handle->stateConfVector[handle->stateConfVectorPosition])
 		{
-		case Ampel_main_region_off_r1_YellowOn :
+		case Ampel_main_region_off_r1_YellowOn:
 		{
 			ampel_react_main_region_off_r1_YellowOn(handle);
 			break;
 		}
-		case Ampel_main_region_off_r1_YellowOff :
+		case Ampel_main_region_off_r1_YellowOff:
 		{
 			ampel_react_main_region_off_r1_YellowOff(handle);
 			break;
 		}
-		case Ampel_main_region_on_r1_Green :
+		case Ampel_main_region_on_r1_Green:
 		{
 			ampel_react_main_region_on_r1_Green(handle);
 			break;
 		}
-		case Ampel_main_region_on_r1_GreenYellow :
+		case Ampel_main_region_on_r1_GreenYellow:
 		{
 			ampel_react_main_region_on_r1_GreenYellow(handle);
 			break;
 		}
-		case Ampel_main_region_on_r1_Red :
+		case Ampel_main_region_on_r1_Red:
 		{
 			ampel_react_main_region_on_r1_Red(handle);
 			break;
 		}
-		case Ampel_main_region_on_r1_RedYellow :
+		case Ampel_main_region_on_r1_RedYellow:
 		{
 			ampel_react_main_region_on_r1_RedYellow(handle);
 			break;
 		}
-		case Ampel_main_region_on_r1_YellowGreen :
+		case Ampel_main_region_on_r1_YellowGreen:
 		{
 			ampel_react_main_region_on_r1_YellowGreen(handle);
 			break;
@@ -222,39 +219,39 @@ sc_boolean ampel_isStateActive(const Ampel* handle, AmpelStates state)
 	switch (state)
 	{
 		case Ampel_main_region_off :
-			result = (sc_boolean) (handle->stateConfVector[0] >= Ampel_main_region_off
-				&& handle->stateConfVector[0] <= Ampel_main_region_off_r1_YellowOff);
+			result = (sc_boolean) (handle->stateConfVector[SCVI_AMPEL_MAIN_REGION_OFF] >= Ampel_main_region_off
+				&& handle->stateConfVector[SCVI_AMPEL_MAIN_REGION_OFF] <= Ampel_main_region_off_r1_YellowOff);
 			break;
 		case Ampel_main_region_off_r1_YellowOn :
-			result = (sc_boolean) (handle->stateConfVector[0] == Ampel_main_region_off_r1_YellowOn
+			result = (sc_boolean) (handle->stateConfVector[SCVI_AMPEL_MAIN_REGION_OFF_R1_YELLOWON] == Ampel_main_region_off_r1_YellowOn
 			);
 			break;
 		case Ampel_main_region_off_r1_YellowOff :
-			result = (sc_boolean) (handle->stateConfVector[0] == Ampel_main_region_off_r1_YellowOff
+			result = (sc_boolean) (handle->stateConfVector[SCVI_AMPEL_MAIN_REGION_OFF_R1_YELLOWOFF] == Ampel_main_region_off_r1_YellowOff
 			);
 			break;
 		case Ampel_main_region_on :
-			result = (sc_boolean) (handle->stateConfVector[0] >= Ampel_main_region_on
-				&& handle->stateConfVector[0] <= Ampel_main_region_on_r1_YellowGreen);
+			result = (sc_boolean) (handle->stateConfVector[SCVI_AMPEL_MAIN_REGION_ON] >= Ampel_main_region_on
+				&& handle->stateConfVector[SCVI_AMPEL_MAIN_REGION_ON] <= Ampel_main_region_on_r1_YellowGreen);
 			break;
 		case Ampel_main_region_on_r1_Green :
-			result = (sc_boolean) (handle->stateConfVector[0] == Ampel_main_region_on_r1_Green
+			result = (sc_boolean) (handle->stateConfVector[SCVI_AMPEL_MAIN_REGION_ON_R1_GREEN] == Ampel_main_region_on_r1_Green
 			);
 			break;
 		case Ampel_main_region_on_r1_GreenYellow :
-			result = (sc_boolean) (handle->stateConfVector[0] == Ampel_main_region_on_r1_GreenYellow
+			result = (sc_boolean) (handle->stateConfVector[SCVI_AMPEL_MAIN_REGION_ON_R1_GREENYELLOW] == Ampel_main_region_on_r1_GreenYellow
 			);
 			break;
 		case Ampel_main_region_on_r1_Red :
-			result = (sc_boolean) (handle->stateConfVector[0] == Ampel_main_region_on_r1_Red
+			result = (sc_boolean) (handle->stateConfVector[SCVI_AMPEL_MAIN_REGION_ON_R1_RED] == Ampel_main_region_on_r1_Red
 			);
 			break;
 		case Ampel_main_region_on_r1_RedYellow :
-			result = (sc_boolean) (handle->stateConfVector[0] == Ampel_main_region_on_r1_RedYellow
+			result = (sc_boolean) (handle->stateConfVector[SCVI_AMPEL_MAIN_REGION_ON_R1_REDYELLOW] == Ampel_main_region_on_r1_RedYellow
 			);
 			break;
 		case Ampel_main_region_on_r1_YellowGreen :
-			result = (sc_boolean) (handle->stateConfVector[0] == Ampel_main_region_on_r1_YellowGreen
+			result = (sc_boolean) (handle->stateConfVector[SCVI_AMPEL_MAIN_REGION_ON_R1_YELLOWGREEN] == Ampel_main_region_on_r1_YellowGreen
 			);
 			break;
 		default:

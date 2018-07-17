@@ -1,30 +1,30 @@
 Src/timer.o: ../Src/timer.c ../Src/timer.h ../Src/../src-gen/Ampel.h \
  ../Src/../src-gen/../Src/sc_types.h \
- /Users/simonziehme/develop/stm/ampel/Ampel/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h \
- /Users/simonziehme/develop/stm/ampel/Ampel/Inc/stm32f4xx_hal_conf.h \
- /Users/simonziehme/develop/stm/ampel/Ampel/Inc/mxconstants.h \
- /Users/simonziehme/develop/stm/ampel/Ampel/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h \
- /Users/simonziehme/develop/stm/ampel/Ampel/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h \
- /Users/simonziehme/develop/stm/ampel/Ampel/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h \
- /Users/simonziehme/develop/stm/ampel/Ampel/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f411xe.h \
- /Users/simonziehme/develop/stm/ampel/Ampel/Drivers/CMSIS/Include/core_cm4.h \
- /Users/simonziehme/develop/stm/ampel/Ampel/Drivers/CMSIS/Include/core_cmInstr.h \
- /Users/simonziehme/develop/stm/ampel/Ampel/Drivers/CMSIS/Include/cmsis_gcc.h \
- /Users/simonziehme/develop/stm/ampel/Ampel/Drivers/CMSIS/Include/core_cmFunc.h \
- /Users/simonziehme/develop/stm/ampel/Ampel/Drivers/CMSIS/Include/core_cmSimd.h \
- /Users/simonziehme/develop/stm/ampel/Ampel/Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h \
- /Users/simonziehme/develop/stm/ampel/Ampel/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h \
- /Users/simonziehme/develop/stm/ampel/Ampel/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc_ex.h \
- /Users/simonziehme/develop/stm/ampel/Ampel/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h \
- /Users/simonziehme/develop/stm/ampel/Ampel/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio_ex.h \
- /Users/simonziehme/develop/stm/ampel/Ampel/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h \
- /Users/simonziehme/develop/stm/ampel/Ampel/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma_ex.h \
- /Users/simonziehme/develop/stm/ampel/Ampel/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h \
- /Users/simonziehme/develop/stm/ampel/Ampel/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h \
- /Users/simonziehme/develop/stm/ampel/Ampel/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h \
- /Users/simonziehme/develop/stm/ampel/Ampel/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h \
- /Users/simonziehme/develop/stm/ampel/Ampel/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h \
- /Users/simonziehme/develop/stm/ampel/Ampel/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h \
+ /home/simon/stash/Ampel/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h \
+ /home/simon/stash/Ampel/Inc/stm32f4xx_hal_conf.h \
+ /home/simon/stash/Ampel/Inc/mxconstants.h \
+ /home/simon/stash/Ampel/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h \
+ /home/simon/stash/Ampel/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h \
+ /home/simon/stash/Ampel/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h \
+ /home/simon/stash/Ampel/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f411xe.h \
+ /home/simon/stash/Ampel/Drivers/CMSIS/Include/core_cm4.h \
+ /home/simon/stash/Ampel/Drivers/CMSIS/Include/core_cmInstr.h \
+ /home/simon/stash/Ampel/Drivers/CMSIS/Include/cmsis_gcc.h \
+ /home/simon/stash/Ampel/Drivers/CMSIS/Include/core_cmFunc.h \
+ /home/simon/stash/Ampel/Drivers/CMSIS/Include/core_cmSimd.h \
+ /home/simon/stash/Ampel/Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h \
+ /home/simon/stash/Ampel/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h \
+ /home/simon/stash/Ampel/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc_ex.h \
+ /home/simon/stash/Ampel/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h \
+ /home/simon/stash/Ampel/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio_ex.h \
+ /home/simon/stash/Ampel/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h \
+ /home/simon/stash/Ampel/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma_ex.h \
+ /home/simon/stash/Ampel/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h \
+ /home/simon/stash/Ampel/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h \
+ /home/simon/stash/Ampel/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h \
+ /home/simon/stash/Ampel/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h \
+ /home/simon/stash/Ampel/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h \
+ /home/simon/stash/Ampel/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h \
  ../Src/sc_types.h
 
 ../Src/timer.h:
@@ -33,54 +33,54 @@ Src/timer.o: ../Src/timer.c ../Src/timer.h ../Src/../src-gen/Ampel.h \
 
 ../Src/../src-gen/../Src/sc_types.h:
 
-/Users/simonziehme/develop/stm/ampel/Ampel/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:
+/home/simon/stash/Ampel/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:
 
-/Users/simonziehme/develop/stm/ampel/Ampel/Inc/stm32f4xx_hal_conf.h:
+/home/simon/stash/Ampel/Inc/stm32f4xx_hal_conf.h:
 
-/Users/simonziehme/develop/stm/ampel/Ampel/Inc/mxconstants.h:
+/home/simon/stash/Ampel/Inc/mxconstants.h:
 
-/Users/simonziehme/develop/stm/ampel/Ampel/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h:
+/home/simon/stash/Ampel/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h:
 
-/Users/simonziehme/develop/stm/ampel/Ampel/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h:
+/home/simon/stash/Ampel/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h:
 
-/Users/simonziehme/develop/stm/ampel/Ampel/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h:
+/home/simon/stash/Ampel/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h:
 
-/Users/simonziehme/develop/stm/ampel/Ampel/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f411xe.h:
+/home/simon/stash/Ampel/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f411xe.h:
 
-/Users/simonziehme/develop/stm/ampel/Ampel/Drivers/CMSIS/Include/core_cm4.h:
+/home/simon/stash/Ampel/Drivers/CMSIS/Include/core_cm4.h:
 
-/Users/simonziehme/develop/stm/ampel/Ampel/Drivers/CMSIS/Include/core_cmInstr.h:
+/home/simon/stash/Ampel/Drivers/CMSIS/Include/core_cmInstr.h:
 
-/Users/simonziehme/develop/stm/ampel/Ampel/Drivers/CMSIS/Include/cmsis_gcc.h:
+/home/simon/stash/Ampel/Drivers/CMSIS/Include/cmsis_gcc.h:
 
-/Users/simonziehme/develop/stm/ampel/Ampel/Drivers/CMSIS/Include/core_cmFunc.h:
+/home/simon/stash/Ampel/Drivers/CMSIS/Include/core_cmFunc.h:
 
-/Users/simonziehme/develop/stm/ampel/Ampel/Drivers/CMSIS/Include/core_cmSimd.h:
+/home/simon/stash/Ampel/Drivers/CMSIS/Include/core_cmSimd.h:
 
-/Users/simonziehme/develop/stm/ampel/Ampel/Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h:
+/home/simon/stash/Ampel/Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h:
 
-/Users/simonziehme/develop/stm/ampel/Ampel/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h:
+/home/simon/stash/Ampel/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h:
 
-/Users/simonziehme/develop/stm/ampel/Ampel/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc_ex.h:
+/home/simon/stash/Ampel/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc_ex.h:
 
-/Users/simonziehme/develop/stm/ampel/Ampel/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h:
+/home/simon/stash/Ampel/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h:
 
-/Users/simonziehme/develop/stm/ampel/Ampel/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio_ex.h:
+/home/simon/stash/Ampel/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio_ex.h:
 
-/Users/simonziehme/develop/stm/ampel/Ampel/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h:
+/home/simon/stash/Ampel/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h:
 
-/Users/simonziehme/develop/stm/ampel/Ampel/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma_ex.h:
+/home/simon/stash/Ampel/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma_ex.h:
 
-/Users/simonziehme/develop/stm/ampel/Ampel/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h:
+/home/simon/stash/Ampel/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h:
 
-/Users/simonziehme/develop/stm/ampel/Ampel/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h:
+/home/simon/stash/Ampel/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h:
 
-/Users/simonziehme/develop/stm/ampel/Ampel/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h:
+/home/simon/stash/Ampel/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h:
 
-/Users/simonziehme/develop/stm/ampel/Ampel/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h:
+/home/simon/stash/Ampel/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h:
 
-/Users/simonziehme/develop/stm/ampel/Ampel/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h:
+/home/simon/stash/Ampel/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h:
 
-/Users/simonziehme/develop/stm/ampel/Ampel/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h:
+/home/simon/stash/Ampel/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h:
 
 ../Src/sc_types.h:

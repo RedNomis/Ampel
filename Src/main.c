@@ -35,7 +35,7 @@
 
 /* USER CODE BEGIN Includes */
 #include "../src-gen/Ampel.h"
-#include "../src/timer.h"
+#include "../Src/timer.h"
 
 /* USER CODE END Includes */
 

@@ -11,9 +11,11 @@ extern "C" {
 /*! \file Header of the state machine 'ampel'.
 */
 
+
 /*! Enumeration of all states */ 
 typedef enum
 {
+	Ampel_last_state,
 	Ampel_main_region_off,
 	Ampel_main_region_off_r1_YellowOn,
 	Ampel_main_region_off_r1_YellowOff,
@@ -22,8 +24,7 @@ typedef enum
 	Ampel_main_region_on_r1_GreenYellow,
 	Ampel_main_region_on_r1_Red,
 	Ampel_main_region_on_r1_RedYellow,
-	Ampel_main_region_on_r1_YellowGreen,
-	Ampel_last_state
+	Ampel_main_region_on_r1_YellowGreen
 } AmpelStates;
 
 /*! Type definition of the data structure for the AmpelIface interface scope. */
@@ -50,6 +51,20 @@ typedef struct
 /*! Define dimension of the state configuration vector for orthogonal states. */
 #define AMPEL_MAX_ORTHOGONAL_STATES 1
 
+/*! Define maximum number of time events that can be active at once */
+#define AMPEL_MAX_PARALLEL_TIME_EVENTS 1
+
+/*! Define indices of states in the StateConfVector */
+#define SCVI_AMPEL_MAIN_REGION_OFF 0
+#define SCVI_AMPEL_MAIN_REGION_OFF_R1_YELLOWON 0
+#define SCVI_AMPEL_MAIN_REGION_OFF_R1_YELLOWOFF 0
+#define SCVI_AMPEL_MAIN_REGION_ON 0
+#define SCVI_AMPEL_MAIN_REGION_ON_R1_GREEN 0
+#define SCVI_AMPEL_MAIN_REGION_ON_R1_GREENYELLOW 0
+#define SCVI_AMPEL_MAIN_REGION_ON_R1_RED 0
+#define SCVI_AMPEL_MAIN_REGION_ON_R1_REDYELLOW 0
+#define SCVI_AMPEL_MAIN_REGION_ON_R1_YELLOWGREEN 0
+
 /*! 
  * Type definition of the data structure for the Ampel state machine.
  * This data structure has to be allocated by the client code. 
@@ -62,6 +77,7 @@ typedef struct
 	AmpelIface iface;
 	AmpelTimeEvents timeEvents;
 } Ampel;
+
 
 /*! Initializes the Ampel state machine data structures. Must be called before first usage.*/
 extern void ampel_init(Ampel* handle);
@@ -103,6 +119,8 @@ extern sc_boolean ampel_isFinal(const Ampel* handle);
 
 /*! Checks if the specified state is active (until 2.4.1 the used method for states was called isActive()). */
 extern sc_boolean ampel_isStateActive(const Ampel* handle, AmpelStates state);
+
+
 
 #ifdef __cplusplus
 }
